@@ -1,0 +1,80 @@
+Html
+
+* HTML is markup language use to describe the structure of web page (Skeleton).
+* CSS - designing, images addition.
+* JavaScript - used to add action, motion & user interaction.
+
+                 <HTML>
+                   |
+              -----------
+             |           |
+           <HEAD>      <BODY>
+             |           |
+             |       -----------
+             |      |           |
+           <TITLE> <ARTICLE>  <ASIDE>
+
+
+* Attributes provides additional information about the tag
+* We can link pages with the help of hyperlink and anchor tag.
+* We can use target="_blank" (attribute and value) to open in next tab
+ 
+* <br> tag is used for line change.
+* <img/> is a non-container tag.
+* Title attribute se page SCO friendly ho jata h aur page ke bare me information batata h.
+* alt attribute - agar image available na ho to text dikha dega "image not available" ka.
+* Through style attribute, we can control height and width.
+
+* Three types of button in html :-
+  1. submit button
+  2. reset button
+  3. button
+
+* Two types of list :- 
+  1. unordered list - we don't have number just bullet in front of text
+  2. ordered list
+
+* <b></b> (bold tag) for bolding text and <strong></strong> tag is a type of bold tag but it is important
+
+* <i></i> tag is used to change text into italic. 
+
+* subscript means niche. ex - 2<sub>4</sub> 
+* superscript means upar. ex -  2<sup>4</sup>
+
+* <del></del> - used for deleting text
+* <em></em> (emphasis tag) - used for focusing
+
+* We can write text formatting tag in google search bar to see different kind of tag
+
+* For making table, we will use <table></table> (table tag) 
+* for row - <tr></tr>
+* for column - <td></td>
+* for heading - <th></th>
+
+* for video playing, use this <video></video> tag
+
+* for getting play option in video, we will use controls tag
+
+* There are three types of selector -
+ 
+  i. Tag selector - hmlog apne pure page me kisi bhi element ko with tag target kar sakte h 
+ ii. Class selector - multiple element ko target kar sakte h and jab bhi kisi class wale element ko target karenge to dot lagayenge
+iii. Id selector - issme target karne ke liye # use hoga and id ek page me ek hi element ki hogi.
+
+* User ki information ko collect karne ke liye banate h form.
+  Form has two attributes - 
+
+  i. Action - have to mention where it will go 
+ ii. Method - Post, Get
+
+
+* Option dene ke liye select tag use karenge
+
+* The value attribute defines what data will be sent to the server when the form is submitted. 
+
+* multiple is an HTML attribute
+
+* <form action="register.jsp" method="post"> - Here, action="register.jsp" tells the browser to send the form’s data to a file called register.jsp (a JavaServer Page).
+
+
+

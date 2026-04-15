@@ -1,0 +1,7 @@
+Work
+
+1. Solve spiral question in leetcode
+2. Solve sorting assignment problem
+3. Solve Arrays (Part 2) assignment problem.
+4. Methods assignment problem also.
+5. See and practise divide & conquer and Time and space complexity.

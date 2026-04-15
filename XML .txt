@@ -1,0 +1,36 @@
+XML 
+
+* eXtensible Markup Language
+
+* In HTML we have Layout and data but in XML we have only data which we want to send from server to client.
+
+* XML used for :- 
+  1. Transer Data - XML, JSON
+  2. Configure framework
+  3. Design the layout
+
+
+example - 
+
+ <aliens>  - root tag
+  <aliens>
+    <name>Nidhi</name>
+    <salary>100000</salary>
+  </aliens>
+ </aliens>
+
+
+* XML Parser
+
+  Grammer
+   1. Structure - DTD - Document type Definition
+   2. Content - Schema(data)
+
+* Rules 
+
+1. one root tag
+2. xml case sensitive
+3. every opening tag needs a closing tag
+4. every attribute value should be inside a double/single quote
+
+ 

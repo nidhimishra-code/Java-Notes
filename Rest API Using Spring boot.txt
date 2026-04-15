@@ -1,0 +1,81 @@
+
+Rest API Using spring boot 
+
+
+ Mobile                        
+             Request            Presentation                    Services 
+         <-------------->          Layers        <----------->    Layer
+             Response           { Controllers }
+ Chrome                                                            |
+                                                                   |
+                                                                   |
+                                                                   |
+                                 Database  <------------> Dao/ Repository
+                                                                 Layer
+
+
+* Controllers, Services and Repository layer - server
+* Mobile, Chrome - Client
+
+
+
+* API Urls for course App 
+
+    Method          API urls                           Operation 
+                    Urls starts with base url 
+
+    GET             /courses                           Get all course 
+
+    GET             /courses/{courseId}                Get single course of
+                                                       given id in url
+
+    POST            /courses                           Add new course 
+
+    PUT             /courses                           Update the course 
+
+    DELETE          /courses/{courseId}                Delete the course Id
+
+
+
+
+* src/main/java (SpringrestApplication) - Starting point of spring framework, classes will start from here.
+
+* src/main/resources (application.properties) - configuration will do this file.
+
+* pom.xml - heart of spring project
+
+
+<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+
+
+* REST - Representational State Transfer - data json ya xml ke form me bhejte h.
+
+* @RestController - to tell spring boot about our controller
+* @GetMapping("/home") - to call function of controller
+* Course.java - it will store data for courses.
+* @Service - through this annotation, spring framework will identify CourseServiceImpl as service class.
+* @PathVariable - to get courseId 
+
+
+* Database configuration:mysql
+     JPA ko implement hibernate hi kar raha h.
+    
+* public List<Course> getCourses() {  // database se sara uthayega - object banayega - list me add karega - return kar dega list
+		return courseDao.findAll();
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

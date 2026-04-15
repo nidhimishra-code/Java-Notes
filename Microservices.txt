@@ -1,0 +1,29 @@
+Microservices
+
+Monolithic - Package
+
+Drawback of Monolithic architure/ Application
+
+ 1. Team Dependencies
+ 2. Scalability
+ 3. Crashing issue
+
+
+Microservices - 1. Dividing entire project into small services is called Microservices
+                2. Each service should be self-contained, should be able to depoly separately and should be scaled separately (they shouldn't depend on other services).
+
+
+ex - Search - Java      Catalog - node js   Users - python
+     Payment - Python   Sellers - .NET      Shipping - Java
+ 
+
+How these services will communicate?
+These services uses HTTP Request
+
+
+    Mobile ----->  API GATEWAY  <----- CATALOG 
+                                <----- SEARCH
+    WEB    ----->               <----- SHIPPING
+                                <----- PAYMENT
+                                <----- SELLERS
+                                <----- USERS

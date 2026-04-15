@@ -1,0 +1,83 @@
+Selenium
+
+* Base class contain 5 important things - 
+      Test configure
+      TestNG annotation
+      Driver initialization
+
+
+* Suppose you have 200 test cases and 49 test failed, how would you collect the data of only failed test cases in testNG. Best way? 
+ 
+ans. We will create one listner class which will capture all failed test data. OnTestFailure() runs only for failed tests. We will attach this with testNG and we can triger this particular test.
+
+49 failed test cases will get stored in testeNG failed XML and we can run that XML.
+
+           import org.testing.Resources;
+           import org.testing.ArrayList;
+           import org.testing.List;
+      
+           public class FailedTestListener implements ITestListener {
+    
+               public static List<String> failedTests = new ArrayList<>();
+    
+               @Override 
+               public void onTestFailure(ITestResult result) {
+                   failedTests.add(result.getName());
+               }
+            }
+        
+            onTestFailure() runs only for failed tests
+            store: Test name
+            (optionally class name, error, timestamp)
+
+* How would you capture screenshot in selenium.
+
+ans. File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.File); {
+     File dest = new File("screenshots/failure.png");
+     FileUtils.copyFile(src, dest);
+}
+
+
+* How we will implement abstraction and Inheritance in automation framework?
+
+ans. we will implement in POM
+
+* Write Xpath for train ticket.
+
+ans. //span[text()='Train tickets']
+
+     If text have space then use normalize-space
+     //span[normalize-space(text())='Train tickets']
+
+
+* Write Xpath for "from" and "to" destination.
+
+ans. //input[@id='srcinput']
+
+
+//td[@class="cell"]/span/span
+
+//span[@class="yf-17d5bsf base" and @data-testid="change"]
+
+
+//span[contains(@class, "subscribed")]
+
+
+
+
+
+Class obj = new Class();
+
+obj.method(); 
+
+
+
+
+
+
+
+
+
+
+
+

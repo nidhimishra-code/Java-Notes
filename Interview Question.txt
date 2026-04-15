@@ -1,0 +1,274 @@
+Interview Question
+
+       HTML 
+
+1. What is !DOCTYPE?
+
+ans. It will tell browser type of document that we are writing.
+
+2. How to redirect to a particular section of a page using HTML ?
+
+ans. To redirect to a specific section of a page in HTML, use anchor tags with id attributes.
+
+           <a href="#section1">Go to Section 1</a>
+           <section id="section">
+           </section>
+
+3. Are <b> and <strong> tags same? If not, then why?
+
+ans. <BOLD> -- Physical tag -- Words Thicker
+
+     <STRONG> -- Logical tag -- Words Thicker  
+                                Important text
+
+4. What are the two types of Web Storage in HTML5?
+
+ans. 1. Session Storage - It stores data of the current session only.
+     2. Local Storage - localStorage object stores the data with no expiration date.
+
+5. What are semantic elements in HTML?
+
+ans. Semantic elements are those that clearly describe their meaning in a human and machine-readable way.
+
+ex- <header>, <footer>, <section>, <article>, <time>, <nav>
+
+
+6. What are the HTML tags used to display a table?
+
+ans.     HTML TABLE          -- <caption>
+
+     Days       Weather      -- <table header>
+     Monday     Sunny        -- <table row>
+     Tuesday    Rainy        -- <table data>
+
+   * <table>: Defines the table structure.
+   * <tr>: Defines a row within the table.
+   * <th>: Defines a header cell within a row(usually bold and centered).
+   * <td>: Defines a standard data cell within a row.
+   * <caption>: Adds a title or caption to the table.
+
+
+7. What is the purpose of the <meta> tag in HTML?
+
+ans. Meta tag are define under head tag, it will ensure webage correctly displays special character, symbols and texts in multiple languages.
+
+
+8. what is the use of alt attribute in images?
+
+ans. The <img> alt attribute is used to specify the alternate text for an image. It is useful when the image is not displayed. It is used to give alternative information for an image.
+  
+   Syntax: <img alt="text">
+
+
+9. What is an image map?
+
+ans. Image map facilitates to link many different web pages using a single image. It is represented by <map> tag.
+
+
+10. What is the use of a span tag? Give one example.
+
+ans. For adding color on text 
+     For adding background on text 
+     Highlight any color text
+
+
+     <p><span style="color:#ffffff;">In this page we use span.</span></p>
+
+
+11. what is the use of an iframe tag?
+
+ans. An iframe tag is used  to display a web page within a web page.
+
+     Syntax: <iframe src="URL"></iframe>
+
+12. What is the difference between an absolute and relative URL?
+
+ans. Absolute Url - An absolute URL includes the full web address, the protocol (such as http or https) and the domain name (such as www.example.com).
+
+Relative Url - A relative URL, on the other hand, specifies path of the resource. 
+
+            |<------------Absolute---------------->|
+
+            https://www.mydomain.com/path/to/my-page
+
+                                    |<--Relative-->|
+
+
+            
+13. Difference between link tag <link> and anchor tag <a> ?
+
+ans. Anchor Tag -- The anchor tag <a> is used to create a hyperlink to another webpage or to a certain part of the webpage.
+     
+Link Tag - link tag <link> defines a link between a document and an external resource and it's not clickable.
+   
+         <a href="https://www.codewithfaraz.com">Click Here!</a>
+         |______| |____________________________| |_________||___|
+
+          oppening         Target link              Anchor    Closing
+           Anchor                                    Text    Anchor Tag
+            Tag
+
+14. What is the difference between <figure> tag and <img> tag?
+
+ans. Figure Tag - The <figure> tag acts as a semantic container for figures like images or diagrams.
+
+Image Tag - The <img> tag is used to embed images directly into a webpage.
+
+      <figure>
+          <img src="image.jpg" alt="Description of the image">
+          <figcaption>Caption describing the image</figcaption>
+      </figure>
+
+15. How to handle events in HTML?
+
+ans. We will use JavaScript
+
+
+
+
+      CSS
+
+
+1. Which type of CSS holds the highest priority?
+
+ans. Types of CSS:- 
+
+       1. Inline CSS - Inline has the highest priority 
+       2. Embedded CSS - Internal or Embedded has the second priority 
+       3. External CSS - External style sheets have the least priority.
+
+2. What does the 'a' in rgba mean?
+
+ans. R: RED, G: GREEN, B: BLUE, A: ALPHA (specify the transparency of elements, the value lies between 0.0 to 1.0)
+
+Syntax 
+
+h1 {
+   color:rgba(R, G, B, A);
+}
+
+
+3. What are CSS HSL Colors?
+
+ans. H:Hue  S:Saturation   L:Lightness
+
+Hue: Hue is the degress of the color wheel. Its value lies between 0 to 360.
+
+Saturation: It takes a percentage value, where 100% represents completely saturated, while 0% represents completely unsaturated (gray)
+
+Lightness: It takes a percentage value, where 100% represents white, while 0% represents black.
+
+
+4. Define z-index.
+
+ans. Z-index is used to specify the stack order of elements that overlap each other.
+
+5. What do you understand by the universal sector?
+
+ans. A universal selector is a selector that matches any element type's name insead of selecting elements of a particular type.
+
+It selects all the element on the webpage applying style to every document
+
+   * {
+      color: #202020;
+    }
+
+  Example:
+
+     <style> *{color: blue; font-size: 10px; } </style>
+
+
+6. What are the different CSS link states?
+
+ans. There are four states of links given below: 
+
+a:link: This is a normal, unvisited link.
+a:visited: This is a link visited by a user at least once
+a:hover: This is a link when the mouse hovers over it
+a:active: This is a link that is just clicked
+
+
+7. Can we add an image as a list item marker?
+
+ans.  To add an image as the list-item marker in a list, we use the list-style-image property in CSS.
+
+Span tag is used to provide inline styling
+
+8. How can we give a shadow effect to our text in CSS?
+
+ans. Syntax:  h1{
+                  text-shadow: 2px 4px  3px rgba(0,0,0.3);
+              }                 |   |     |            |
+                            offset offset Blur       color
+                               x     y    radius
+
+
+9. How is Cell Padding different from Cell Spacing?
+
+ans.Cell Spacing is the space or gap between two consecutive cells.
+
+Cell Padding is the space or gap between the text/ content of the cell and the edge/ border of the cell.
+
+
+10. what are the CSS counters?
+
+ans. CSS counters can be used to increment the numbering of the headings automatically.
+
+11. What is @keframes used for?
+
+ans. We use to smoothly apply the animation on the elements
+
+
+12. What is the difference between flexbox and grid?
+
+ans. Flexbox is one-dimensional, focusing on arranging items in a single row or column.
+
+Grid is two-dimensional, managing layouts in both rows and columns simultaneously.
+
+
+13. How can we add 3D transformations to our project using CSS?
+
+ans. "transform" property will provide 3D transforamtion.
+
+Syntax: transform: rotateX(60deg) rotateY(90deg) rotateZ(45deg)
+
+
+14. What is the @media query in CSS?
+
+ans. The @media query in CSS is a powerful feature used for creating responsive web designs. 
+
+15. When the styling is based on condition like:
+
+viewport size
+screen resolution 
+device orientation
+
+
+16. What is Box Model in CSS?
+
+ans. The CSS Box Model is a fundamental concept that describes how elements are structured and how their size and spacing are calculated in web design.
+
+In Box Model we have Four Styling: 
+
+Content 
+Padding
+Border 
+Margin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

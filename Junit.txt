@@ -1,0 +1,87 @@
+Junit and Mockito
+
+Writing test cases
+
+* Unit Testing - Testing specific units of code independently.
+
+                     Class CalculatorService 
+                     {
+               
+                 ---     Add()   ---
+                |        {          |   Unit Testing
+                |                   |       
+  Integration   |        }       ---
+    Testing     |
+                |        Product()
+                |         {
+                |
+                 ---      }
+        
+                       }
+
+* Advantages of unit testing 
+     1. Find bugs early 
+     2. Easy to fix bugs
+     3. Reduce the cost and time
+
+* How to perform unit test
+      Junit - most popular framework for unit testing
+      Junit-4
+      Junit-5
+
+* What is Mockito - Its mocking framework
+
+
+* System Testing - testing whole system is called system testing 
+
+* JUNIT-5
+  Junit-5 is composed of several different modules.
+
+          Junit Platform  +  Junit Jupitor + Junit Vintage
+
+
+* Junit Platform 
+      TestEngine API 
+      Responsible for launching testing framework on JVM 
+
+
+* Junit Jupiter 
+      New programming and extension model for writing tests.
+      New annotations
+      TestEngine implementation
+
+
+* Junit Vintage 
+      Provide support for Junit 3 and 4 Backend compatibility
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+

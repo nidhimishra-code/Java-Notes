@@ -1,0 +1,1846 @@
+Java
+
+* Data Types in Java 
+
+Primitive                    Non-Primitive 
+(already exist in java)      (Khud se banana hota h)
+
+byte                           string
+short                          Array
+char                           Class
+boolean                        Object
+int                            Interface
+long
+float
+double
+
+* Size of Data Types
+
+Memory me jo jagah di jati h usse hm measure karte h "bytes" me.
+    1 bytes = 8 bits
+ 
+byte - 1 byte                  [-128 to 127]  256
+short - 2 bytes
+char - 2 bytes                 ['a'-'z', 'A'-'Z', '@', '%', ',']
+boolean - 1 byte               [true, false]
+int - 4 bytes                  [-2B - +2B]
+long - 8 bytes     
+float - 4 bytes
+double - 8 bytes 
+
+
+key to learn - b1(bachpan me bhaut b1 aata tha), sc2(do sc friend h)
+               il(int, long), fd(float, double)
+
+
+* Type Conversion - widening - implicit(jo apne aap ho jata h java me) 
+
+Conversion happens when:
+
+a. type compatible
+b. destination type > source type        ex:- long b = a;
+                                       (destination)  (source)
+                                                      (a is of int type)
+
+byte -> short -> char -> int -> float -> long -> double;
+
+   
+
+* Type Casting - narrowing - explicit 
+ (java allow nai karta h par hm jabardasti karte h)
+
+ex - float a = 25.0;
+     int b = a;
+
+     int b = (int)a;
+
+
+* Type Promotion in Expressions 
+
+1. Java automatically promotes each byte, short, or char operand to int when evaluating an expression.
+2. If one operand is long, float or double the whole expression is promoted to long, float, or double respectively.
+ 
+ex:- byte b = 5;
+     b = (byte)(b*2) 
+
+
+* How is our Code Running?
+
+JDK =  Development Tools + JRE -> JVM + Libraries
+                            |
+                        (Java Runtime Environment)
+
+
+* Java is a portable language 
+
+Source Code - complier - Byte Code - Java Virtual Machine - Native Code
+  .java                    .class       (JVM)                (Windows, Mac, Linux), 0,1 (Machine Code))
+    |                         |                                  |     
+     ------------------------- ----------------------------------
+            Compilation                   Execution
+
+
+* Naming conventions
+
+Variables \  - sumOfDigits
+Functions /
+Class        - SumOfDigits
+
+* Literals - constant 
+
+* Fibonacci - series
+ 
+  0,1,1,2,3,5,8,13...
+  | | \
+0th 1st 2nd
+
+  
+ for(int i=2; i<=n; i++) {
+  
+    Third = First + Second;
+    First = Second;
+    Second = Third;
+
+ }
+
+* Armstrong Number - (digits)^3 - org num
+  eg: 1. n = 1     1^3 = 1
+   
+      2. n = 153 = 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+
+   num to  Digits 
+    n = 153 to  3, 5, 1  
+
+
+
+   N = n
+   sumOfDigits = 0
+  
+   while(n!=0) {
+    digit = n%10;
+    n = n/10;
+    sumOfDigits += (digit * digit * digit);
+}
+    sumOfDigits == N - true 
+    else - false
+ 
+*** a = a + b 
+    a += b 
+
+
+
+
+* Operators in Java 
+
+Symbols that tell complier to perform some operation
+ 
+   Expression - sum = a + b 
+            
+                 where a,b = operands  
+                       "+" = operator
+
+
+Types of Operators
+
+Arithmetic Operators (Binary/Unary/Ternary)
+Relational Operators
+Logical Operators
+Bitwise Operators 
+Assignment Operators
+
+
+1. Arithmetic Operators - return integer value
+
+Binary - 2 operands                 Unary 
+  
+ +                                    ++       increment  
+ -                                    --       decrement 
+ *
+ /
+ % (modulo)
+                                   a = a + 1  ;  a++   ;  ++a
+                                   a = a - 1  ;  a--   ;  --a
+
+                                   
+
+                                    Pre Increment      Post Increment 
+                                      
+                                       ++a                 a++
+    
+                                   1. Value change       1. Value use 
+                                   2. Value use          2. Value change 
+
+
+
+2. Relational Operators - boolean value return karke dega
+
+  ==   equal
+  !=   not equal to (inequality)
+  >
+  <
+  >=
+  <=
+
+3. Logical Operators - Checks logic of our program
+
+    && (Logical AND)              (stt1) && (stt2) 
+                                     T        T    - True
+                                                     False
+                                                      
+    || (Logical OR)                (stt1) || (stt2)
+                                      F         F   - False
+                                                      True
+     ! (Logical NOT)                true - false
+                                    false - true    !(stt1)
+    
+
+4. Assignment Operators 
+
+     = 
+    +=     A = A + 10    B = B - 5
+              |             |
+            A += 10       B -= 5     
+
+    -+
+    *=
+    /=
+
+
+
+
+*** Precedence = Priority
+
+
+* Bitwise Operators - Bits 
+
+                                                            1
+ * In computer, data get stored in Binary(2) Number System /
+                                                           \
+                                                            0
+                                                       
+
+ * Maths:- decimal no's system(base 10) 
+             |
+           10 digits            
+       (0,1,2,3,4,5,6,7,8,9)
+             
+  
+* Decimal to Binary
+
+     n=5 - repeated division by 2 untill quotient become 0  
+
+           rem
+     2| 5   1
+     2| 2   0            (101) = (5)
+     2| 1   1                 2     10
+      | 0
+
+
+     0 - 0 
+     1 - 1
+     2 - 10
+     3 - 11
+     4 - 100
+     5 - 101
+     6 - 110
+     7 - 111
+     8 - 1000
+     9 - 1001
+    10 - 1010
+
+* Binary to Decimal
+
+  n = 1010
+
+   1*2^3 + 0*2^2 + 1*2^1 + 0*2^0
+    8    +   0   +   2   +  0    = 10
+
+    (1010)  = (10)
+          2       10
+
+*** Trick- n = 14
+
+    2 ki power jo  =< 14         0     1    1    1    0
+                                 _     _    _    _    _
+      14                         |     |    |    |    |
+     - 8                        2^4   2^3  2^2  2^1  2^0
+       6                         16     8    4    2    1
+     - 4
+       2
+     - 2
+       0
+ 
+    (14)   = (1110)
+        10         2
+
+
+
+* Conditional Statements
+
+   if, else 
+   else if
+   ternary operator
+   switch 
+
+
+1. if-else Statements 
+
+   if(condition) {                         () - parenthesis
+   
+   }
+   
+   else {
+    
+   }
+
+
+   
+
+   if(cond1) {       - "if" ki condition1 check hogi agar ye true hui fir bhi "if" ki condition2 check hogi.
+   
+   }
+ 
+   if(cond2) {
+   
+   }
+   
+   else {
+
+   }
+
+
+
+
+2. else if Statements - agar hm chahte h "if" statement true ho gayi to baki statement check na ho uss case me "else if" statement use karte h .
+
+   if(condition 1) {
+    
+   }
+   
+   else if(condition 2) {
+  
+   }
+
+   else {
+
+
+
+*** ternary Operator 
+
+    variable = condition ? statement1 : statement2
+                               |            |
+                              true         false
+
+3. Switch Statement - iske andar agar ek bhi statement true ho gaya to baki sare condition true ho jate h kuyki ye button ki tarah aapas me connected hote h inko torne karne ke liye break statement likhna hota h. 
+
+   switch(variable) {
+   case 1 :
+            break;
+   case 2 :
+            break;
+   case 3 :
+            break;
+   default :
+   }
+
+
+
+Loops - repeat
+
+Types 
+
+while Loop (jab tak)
+for Loop 
+do while Loop
+
+
+* while Loop
+  
+    while(condition) {
+       //do something
+    }
+
+
+* Print number from 1 to 10 using while loop 
+  
+  1 2 3 4 5 6 7 8 9 10 
+
+      int counter = 1;
+       
+      while(counter<=10) {
+      System.out.println(counter);
+      counter++ ; 
+       }
+
+
+* for Loop 
+  
+   for(initialisation; condition; updation) {
+    
+   //do something
+   
+   }
+
+
+
+* Print Reverse of a number 
+
+    Last digit of a number = number % 10 
+    To remove last digit of a number = number / 10
+
+
+* Reverse the given number 
+  
+    rev = (rev*10) + lastDigit
+    
+    int n = 1025;
+    int rev = 0;
+    
+   while(n>0) {
+   int lastDigit = n%10;
+   rev = (rev*10) + lastDigit;
+   n = n/10;
+   }
+     System.out.println(rev);
+
+
+* do-while Loop                           
+
+   do {                                  
+   
+   //do something                         
+                                         
+   } while(condition);                  
+                                           
+
+* Break Statement - to exit the loop
+
+    Ex:- for(int i=1; i<=5; i++) {
+             if(i==3) {
+                 break;
+             }
+             System.out.println(i);
+         }
+        
+         System.out.println("i am out of the loop");
+         
+
+* Keep entering numbers till user enters a multiple of 10
+
+        Scanner sc = new Scanner(System.in);
+        
+        do {
+        System.out.println("enter your number : ");
+        int n = sc.nextInt();
+
+        if(n % 10 == 0) {
+        break;
+        }
+        System.out.println(n);
+        
+        } while(true);
+
+
+
+* Continue Statement - to skip an iteration
+
+    for(int i=1; i<=5; i++) {
+        if(i == 3) {
+            continue;
+        }
+        System.out.println(i);
+    }
+
+
+
+* Display all numbers entered by user except multiples of 10
+  
+    Scanner sc =  new Scanner(System.in);
+    
+    do {
+       System.out.println("Enter a number");
+       int n = sc.nextInt();
+       if(n%10 == 0) {
+       continue;
+       } 
+       System.out.println(n);
+       } while(true);
+
+    
+* Check if a number is prime or not 
+
+  prime : 2, 3, 5, 7, 11
+    |
+ not come in any
+ other number table
+
+
+* n = n^(1/2) * n^(1/2)
+
+  Range = 2 to n-1
+
+
+* Patterns (Part 1)
+
+    Print STAR pattern - nested loops                  if(a>b) {
+                                                           if(a>c) {          ---  nested if-else
+                                                           } 
+                                                       }
+
+
+             *
+             * *
+             * * *
+             * * * *
+
+        
+           1. Lines 
+              outer loop - 4 times 
+ 
+           2. number of times - if we are at ith line
+              inner loop - i times
+
+           3. what to print?
+               "*"
+
+* Functions/Methods
+
+     Function - Kam or work
+                block of code 
+                reusable
+                                                  
+
+    * Syntax 
+ 
+           returnType name() {
+             //body                        input - [] - output
+             return statement;
+           }
+
+
+    * Main function me execution shuru hota h.
+    * Function jo class ke andar likhe jate h usse method bolte h.
+
+
+   * Syntax with Parameters(input)
+ 
+            returnType name(type param1, type param2) {
+               //body
+               return statement;        // return value to main function
+            }
+
+
+   * Parameters v/s Arguments
+      
+          formal params/ params - definition
+          actual params/ arguments - call
+
+
+   * What happens in Memory?
+
+                 |____________|
+                 |func__var___|
+                 |sum_int_____|
+                 |main___str__|- stack frame(memory occupy by main function)
+                 
+                 Call Stack 
+
+
+       ps void sum(int a, int b)
+       {
+         int sum = a+b;
+         return;
+       }
+
+       ps void main(String args[]) 
+       {
+         sum();
+       }
+
+
+   * Call by Value 
+
+       Function ke andar jo bhi changes ho jaye wo main fuction ke andar reflect nai karte.                
+       Variable ki copy jati h function call ke andar.
+       Java always calls by value              
+
+
+     changeA(int a) { // copy of main 'a'
+        a = 10;
+     }                   |________________|
+     psvm() {            |changeA_a=5*_10_|
+      int a = 5;         |main_a=5________|
+      changeA(a);
+      syso(a);
+     }
+
+  * Call by Reference - original 
+       
+       Function ke andar bhej kar apne variable me hmne jo bhi changes karwa liye wo calling/main function me bhi reflect karenge. 
+
+   * Factorial of a number, n 
+  
+      n! read as n factorial
+      n! = n*(n-1)*(n-2)*(n-3)...*1
+
+      n! = (n-1)!*n = (n-2)!*(n-1)*n
+   
+      n! = 1*2*3*4*5*...*n
+              
+              4! = 4*3*2*1
+              3! = 3*2*1
+              2! = 2*1
+              1! = 1
+              0! = 1
+    
+      Factorial exist for +ve number
+
+
+    * Binomial Coefficient 
+
+       n
+        C   =    n!/r!(n-r)!
+         r
+
+ 
+    *  Methods:- 1. user defined
+                 2. Inbuilt method - Math class - power 
+                                                  sqrt
+                                                  max
+
+
+
+   * Function Overloading 
+
+     Multiple function with the same name but different parameters(type of params, no. of params).
+     Function overloading does'nt depend on return type.
+        
+           ex:-   int sum(int a, int b)   _ This 2 function are not function overloading.
+                  float sum(int a, int b) 
+                                          
+
+     Using Parameters
+
+         f1: sum of 2 no.   int sum(int a, int b) {
+                              return a+b;
+                            }
+      
+         f2: sum of 3 no.   int sum(int a, int b, int c) {
+                              return a+b+c;
+                            }
+
+
+
+* Check if a number is Prime or not(Optimized)
+
+     6 - 1*6        8 - 1*8
+         2*3            2*4
+         3*2            4*2
+         6*1            8*1
+
+
+    N = n^(1/2) * n^(1/2)
+
+
+
+* Convert from Binary to Decimal 
+
+                 | 
+            Binary Number System (0, 1)
+
+
+  Math -> 0 to 9 
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9          (Decimal Number System)
+                     |                           ___
+                 10 digits                        |
+                                                  10
+
+(o)    =  (0)
+   10        2
+
+
+* Binary to Decimal (n = 101)
+    
+    pow = 0, 1, 2 [power is updating]
+    dec = 0, 1
+     LD = 1, 0, 1 [number ko chota karo]
+
+1. dec = dec + [LD*2^pow]
+       = 0 + [1*2^0] = 0 + 1 = 1
+
+2. dec = 1 + [0*2^1] = 1
+
+3. dec = 1 + [1*2^2] = 5
+
+
+
+
+* Scope - agar hmne koi bhi variable define kar diya, to uss variable ko kaha kaha use karte sakte h, wo ban jata h uss variable ka scope.
+
+    * Method Scope - Ek variable ko define kiya function ke andar, to uss variable ko uss function ke andar kahi bhi use kar sakte h.
+
+    * Block Scope - {
+
+                   Block of code
+
+               }
+
+
+     * Class Scope 
+           |
+        access modifiers
+           |
+          public - can be used anywhere in class
+          private 
+          protected
+
+
+
+* Patterns - Advanced 
+
+
+   * Hollow Rectangle Pattern
+        
+
+* Floyd's Triangle
+
+   1
+   2  3
+   4  5  6
+   7  8  9  10 
+   11 12 13 14 15
+
+
+* Butterfly Pattern
+    
+    n=4
+
+    1. outer 
+         for(int i=1; i<=n; i++)               
+
+    2. Line
+         |
+        stars+spaces+stars
+         i    2*(n-i)  i
+
+
+
+
+
+                      *      *   i=1   sp = 6 = 2*3 = 2*(n-i)
+                      **    **   i=2   sp = 4
+                      ***  ***   i=3   sp = 2
+                      ********   i=4   sp = 0
+                      ********
+                      ***  ***
+                      **    **
+                      *      *
+
+ 
+      Spaces = 2*(n-i)
+
+
+
+*** Agar kisi bhi code ko upar se niche mirror image banana h, to simply outer loop ko 1 se n ke bajaye n se 1 tak le jana h.
+
+
+
+* Hollow Rhombus 
+
+
+         *****                1. outer - for(int i=1 to 5)
+        *   *                 2. Line
+       *   *                       spaces + boundary rectangle
+      *   *                         (n-i)    hollow rectangle
+     *****
+
+
+
+* Diamond Pattern 
+
+                     n=4     1st half  1. outer - 1 to n       
+          *                                 for(int i=1; i<=n; i++)
+         ***                                 
+        *****                          2. what to print
+       *******
+       *******
+        *****
+         ***
+          *
+
+
+
+* Arrays 
+    
+     * Used to store subject marks.
+     * 0-based indexing(c++ & java).
+
+
+     ** Definition of an Array 
+           List of Elements of the same type placed in a contiguous(continous) memory location.
+
+
+     * 1 byte - computer ki memory ke size ka unit hota h.
+
+     ** Operations in Arrays 
+
+          * Create
+          * Input 
+          * Output
+          * Update
+
+          * Creating an Array 
+
+            dataType arrayName[] = new dataType[size];
+                                    |
+                                 Gives us new location or plot.
+
+
+           ex:- int marks[] = new int[50];
+                int numbers[] = {1, 2, 3};
+                
+        
+         * Passing arrays as argument - by reference
+
+
+         ** Linear Search - Time complexity directly proportional to Loop(n).
+
+         ** Largest Number - Find the largest number in a given array.
+                                 
+                                 - infinity = Integer.MIN_VALUE
+                                 + infinity = Integer.MAX_VALUE
+                                                       |
+                                                     utility 
+                                              
+
+
+
+         * Binary Search 
+           prerequisite - sorted arrays
+
+               * PseudoCode
+                
+                start = 0, end = n-1
+                while(start <= end)
+                       find mid                (start + end) / 2
+                       compare mid & key 
+                          mid == key  Found
+                          mid > key   LEFT       end update         end = mid - 1
+                          mid < key   RIGHT      start update       start = mid + 1
+
+
+
+                * Time Complexity 
+                    
+                    Iteration 1 - n    - n/2^0  -          
+                    Iteration 2 - n/2  - n/2^1
+                    Iteration 3 - n/4  - n/2^2
+                    Iteration 4 - n/8  - n/2^3
+                                   .
+                                   . 
+                                   .
+                                   1    - n/2^k  (k+1)th iteration
+              
+
+
+                    n/2^k = 1 => n = 2^k
+                                 k = log n
+                                        2
+                    TC directly proportional to log n
+                                                   2
+
+                              O(logn)
+                                   
+                             n(LS) > Log n(BS)
+                                        2
+
+
+
+          * Print Subarrays
+
+            a continuous part of array 
+
+
+          * Max Subarray Sum
+
+
+               * Prefix Array = prefix[i-1] + array[i]
+                                    |
+                                  prev sum
+                               
+               * prefix[end]-prefix[start-1]
+
+
+       *** Kadane's Algorithm - Jaha negative aa jaye final sum waha usko zero kar dena h. Time Complexity - O(n)
+
+                   * Adding small positive number and big negative number will result negative value, it's better to take zero.
+                                        +ve + -ve -> -ve 
+                                                       |
+                                                       0
+l
+                          * If curr_sum becomes negative then make it zero.
+                             
+                                     ex - -2, -3, 4, -1, -2, 1, 5, -3
+                 
+                                          0   CS  0 0 4 3 1 2 7 4
+                                    -Infinity MS  0 0 4 4 4 4 7 7
+                                         
+
+                           ** To print max between two numbers, we can use Math.max(n1, n2). 
+
+
+
+        *** Trapping Rainwater - amount of water got trapped between building.
+
+              Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+
+                    (w-x) * width 
+                  (waterlevel - bar level/heigth) * width = trapped water
+          
+                     1. Single bar - boundary required for water trapping
+                           wt = 0
+         
+                     2. 2 bars 
+                            wt = 0
+
+                           i. min no. of bars > 2
+                          ii. Asc /Des. - no water is trapped 
+
+
+                       Trapped water = (water level - heigth)
+                                             |
+                                       Min(maxLeft Boundary, maxRight Boundary) 
+
+
+                      * Auxiliary/helper Arrays - use to calculate boundary
+
+
+
+
+
+Assignment problem - Arrays
+
+1. public static boolean sameDistinct(int nums[]) {
+     for(int i=0; i<nums.length; i++) {
+     for(int j=i+1; j<nums.length; j++) {
+       if(nums[i] == nums[j]) {
+          return true;
+}
+       else 
+       return false;
+}
+
+
+2. public static int indexOfTarget(int nums[]) {
+        for(int i=0; i<nums.length; i++) {         // O(n)
+              if(nums[i] == target) {    
+                  return i;
+              } else {
+                   return -1;
+              }
+}
+
+
+
+
+3. public static int maxProfitInStock(int prices[]) {
+      int maxProfit = 0;
+      int profit = 0;
+      int buyingPrice = Integer.MAX_VALUE;
+      for(int i=0; i<prices.length; i++) {
+        if(buyingPrice<prices[i]) {
+            int profit = prices[i] - buyingPrices;
+            maxProfit = Math.max(maxProfit, profit);
+        }
+        else {
+          buyingPrice = prices[i];
+       }
+}
+    return maxProfit;
+}
+         
+
+4. public static int rainWater(int height[]) {
+      int n = height.length;
+      int maxLeft[] = new int[n];
+      maxLeft[0] = height[0];
+      for(int i=1; i<n; i++) {
+       maxLeft[i] = Math.max(heigth[i], maxLeft[i-1]);
+      }
+
+      int maxRight[] = new int[n];
+      maxRight[n-1] = height[n-1];
+      for(int i=n-2; i>=0; i--) {
+      maxRight[i] = Math.max(height[i], maxRight[i+1]);
+      }
+      int trappedRainwater = 0;
+      for(int i=0; i<n; i++) {
+      int waterLevel = Math.min(maxLeft[i], maxRight[i]);
+      trappedRainwater += waterLevel - height[i];
+      }
+      return trappedRainwater;
+}
+ 
+
+5. 
+
+
+
+* Sorting - Arrange in an order
+
+
+    {5, 4, 1, 3, 2} unsorted array
+    {1, 2, 3, 4, 5} Increasing order
+    {5, 4, 3, 2, 1} Decreasing order
+
+         Basic Algorithms
+ 
+           Bubble Sort
+           Selection Sort
+           Insertion Sort
+           Counting Sort(Advanced)
+
+            
+              * Bubble Sort 
+
+                   Idea - large elements come to the end of array by swapping with adjacent elements.
+ 
+
+              * Selection Sort 
+
+                   Idea - pick the smallest(from unsorted), put it at the beginning.
+
+
+              * Insertion Sort 
+                 
+                     Idea - Pick an element(from unsorted part) & place in the right pos in sorted part 
+
+
+               * Inbuilt Sort
+
+                   * import java.util.Arrays;
+                     Arrays.sort(arr)
+                     O(n logn) < O(n^2)
+
+
+                     Arrays.sort(arr, si, ei)
+
+                         where si = starting index
+                               ei = ending index (non-inclusive)
+
+
+
+                    * import java.util.Collections;
+                      Arrays.sort(arr, Collections.reverseOrder())    (reverseOrder function work on object, so convert int to Integer)
+                      Arrays.sort(arr, si, ei, Collections.reverseOrder())
+
+                    ** reverseOrder() function internally comparator ko use karta h.. 
+
+
+               * Counting Sort 
+
+                 1, 4, 1, 3, 2, 4, 3, 7            min - max    +ve no.
+                                                       | 
+                    min - 1                          Range 
+                    max - 7
+                    Range - 7                   If range is small then we can apply counting sort
+
+
+          Count  [0  2  1  2  2  0  0  1]
+             |    0  1  2  3  4  5  6  7 
+             |
+           Frequency 
+
+                  [1  1  2  3  3  4  4  7]
+
+
+         * count[arr[i]]++ means count[arr[i]] =  count[arr[i]] + 1;
+
+
+
+* 2D Arrays - Matrix (Rows & Columns)
+
+
+     Multi-dimensional Arrays
+
+         1. 1D             1 2 3
+
+         2. 2D             1 2 3
+                           5 6 7
+    
+         3. 3D
+            .
+            .
+            .
+            n-D Arrays -  used in Machine Learning
+
+  
+
+* Strings - use to store Words, Sentences, Paragraphs.
+
+
+    what are Strings?
+ 
+      * char[] = {'a', 'b', 'c', 'd'};
+
+      * String str = "abcd";
+
+      * Strings are IMMUTABLE - unchangeable
+      * sc.next(); -  .next() store input but it will take only one word		
+
+
+
+   * Question 1 
+
+       Check if a String is a Palindrome
+          "racecar", "noon", "madam", "1223221"
+
+           logic - divide word into two half and compare first char with last char and so on, if they are equal then the word is palindrome. 
+                        r a c e | c a r 
+                           1st  |  2nd  
+
+
+
+   * String Functions - compare
+
+        * s1.equals(s3) - .equals check whether value are equal or not, return boolean value.
+        * when we make String without new keyword then that string point to old string but when we declare String with new then new Tony get created.
+        * "==" check at object level whether they are same or not.
+
+
+
+   * String Functions - substring 
+                           |
+                      continuous small portion of string and exist as a function in java.
+
+          * "Hello World"                      
+                ----
+                  |
+                low - substring       ewd - subsequence
+
+
+          * Substring 
+              /  \
+             si  ei (excluded)
+
+
+  
+    * How string works in computer memory?
+ 
+
+            String str1 = "Tony";
+            String str2 = "Tony";
+            String str3 = new String("Tony");
+                    |
+                 Interning
+
+  
+   * StringBuilder - is like a string data structure.
+
+             StringBuilder sb = new StringBuilder("HW");
+                   * sb.toString()  - possible to convert StringBuilder to String as object is present.
+                            |
+                       1. convert any object into string
+                       2. object required 
+
+                                 ex:- int a = 10;            
+                                         a.toString(); - not possible to convert into String, object required
+                                
+                                      Integer a = 10;
+                                         a.toString(); - possible
+                                               |
+                                              "10"
+                                         
+                                      char ch = 'a';
+                                         ch.toString(); - not possible
+ 
+                                      Character ch = 'a';
+                                         ch.toString(); - possible
+                                              |
+                                             "a"
+                                      
+
+
+                       
+                     * sb.append() - String ke piche jorne ke liye
+
+                     * Advantages of using StringBuilder - memory efficient.
+
+
+
+
+       * Question 4 
+         
+         For a given String convert each the first letter of each word to uppercase.
+            "hi, i am nidhi" - "Hi, I Am Nidhi"
+          
+
+            * After a empty space, word comes.                
+
+            * Character.toUpperCase(ch);                     
+                  |                  |
+                 'A'                'a'
+             
+
+
+            * This_is_a_beautiful_day
+              |
+              0th index
+
+
+            * Time Complexity - O(n)
+
+
+
+         * Question 5 --  amazon
+
+          * String Compression - repeating letter ko chotta karna h 
+
+             1. "aaabbcccdd" -  "a3b2c3d2"
+             2. "aaaabbbdd"  -  "a4b3d2"
+             3. "abc"        -  "a1b1c1" - String got decompress
+
+
+
+          * Time Complexity - O(n) 
+                   
+
+
+* BIT MANIPULATION - techniques and alogorithm sikhenge jisse hm bit level par jakar apne operation perform kar paye, bits or byte ki form me jo data store hota h usko manipulate kar paye.
+
+      * Computers ke andar jitni bhi information store hoti h wo binary number system ki form me hoti h 
+          
+            * Binary Number System -  0 & 1 
+              ---
+               |
+               2
+
+
+                 Decimal to Binary(4)         Binary to Decimal(100)
+
+
+                    2| 4 0                         1        0      0
+                      ---                          2^2*1 + 2^1*0 + 2^0*0  = 4
+                    2| 2 0
+                      --- 
+                       1 
+              
+                     
+               (4)   =  (100)                   (100)  = (4)
+                  10         2                       2      10
+
+
+                      * 100 - 3 bits
+                        |
+                       set bit - number can't be changed after set bit.
+
+                      * 00000100 - 8 bits   = 100 = 00100 = 000100
+                             
+                       
+
+               * 0 - 000 
+               * 1 - 001
+               * 2 - 010
+               * 3 - 011
+               * 4 - 100
+               * 5 - 101
+               * 6 - 110
+               * 7 - 111
+               * 8 - 1000
+               * 9 - 1001
+               * 10 - 1010
+               * 11 - 1011
+               * 12 - 1100
+
+
+
+               * Bit-wise Operators 
+ 
+                   Binary AND & 
+                   Binary OR |
+                   Binary XOR ^
+                   Binary One's Complement ~
+                   Binary Left Shift << 
+                   Binary Right Shift >>
+
+
+                  * Binary  AND & 
+                                                 5 + 6 = 11
+                      Rules                      5 & 6 = 4           
+        
+                        0 & 0    0                1 0 1
+                        0 & 1    0             &  1 1 0
+                        1 & 0    0               --------
+                        1 & 1    1                1 0 0   = (4)
+                                                               10
+
+
+                  * Binary OR | 
+
+                      Rules                        5 | 6 = 7
+
+                        0 | 0    0                  1 0 1      
+                        0 | 1    1               |  1 1 0
+                        1 | 0    1                 --------
+                        1 | 1    1                  1 1 1   = (7)
+                                                                 10
+
+
+
+
+                  * Binary XOR ^ 
+
+                      Rules                        5 | 6 = 3
+
+                        0 ^ 0    0                  1 0 1      
+                        0 ^ 1    1               ^  1 1 0
+                        1 ^ 0    1                 --------
+                        1 ^ 1    0                  0 1 1   = (3)
+                                                                 10
+
+
+
+                  
+                  * Binary One's Complement(NOT) ~ (Tilt)
+
+                                                    5 = 00000101  
+                                                        -      -
+                                                       MSB     LSB
+
+                      Rules                        ~5 = 11111010  = (-6)
+                                                                        10
+
+                       ~ 0    1                    ~ 1 0 1      
+                       ~ 1    0                     --------
+                                                     0 1 0   = (2)
+                                                                  10
+
+
+
+                       (LSB) Least Significant Bit 
+                       (MSB) Most Significant Bit  
+                               0 - number is positive 
+                               1 - number is negative                                
+
+
+
+                   
+                   * Question 1 
+                     
+                       * Check if a number is Odd or Even 
+
+                             Odd       Even 
+                              |          |
+                             LSB - 1   LSB - 0
+                     
+
+                                 n & 0 = 0
+                                 n & 1 = 1, 0
+
+
+
+                         *    3                      4  
+   
+                            0  1  1 = n            1  0  0 = n
+                          & 0  0  1              & 0  0  1 ----- bitmask
+                         -----------            -----------
+                            0  0  1                0  0  0
+                         -----------            -----------
+                              = (1)                  = (0)
+                                   10                     10
+                                 |                      |
+                                odd                    even
+
+
+                        * Operations
+                           
+                            1. Get ith bit 
+                            2. Set ith bit - ith bit(0 and 1) ko 1 me convert karna h 
+                            3. Clear ith bit 
+                            4. Update ith bit 
+                            5. Clear Last i bits
+                            6. Clear Range of bits
+
+
+
+
+
+* Object Oriented Programming
+
+
+          *  Classes & Objects 
+               |           |
+               |       entities in the real world
+               |
+          group of these entities
+
+
+
+                              attributes(properties)   color(String)
+                     * class /    +
+                        pen  \
+                              functions(behaviors)     changeColor()
+
+
+
+
+                            ex:-   color: blue(String)
+                                   tip: 5(int)
+                                   setColor():
+                                   setTip(): 
+
+
+
+
+           * Main function se program ki execution ki shurat hoti h, complier main function ko khojega program execution ke liye.
+           * Jab bhi kisi object ki property ya function access karna hota h to hm dot operator ka use karte h. 
+           
+           * Access Modifiers/Specifier - Access define karte h kisi bhi object ka.
+
+             Access Modifier     within class     within package     outside package by subclass only    outside package
+            
+             Private                 Y                 N                         N                             N
+             Default                 Y                 Y                         N                             N
+             Protected               Y                 Y                         Y                             N
+             Public                  Y                 Y                         Y                             Y
+             
+
+                   
+           * Getters & Setters
+                   
+                Get: to return the value
+                Set: to modify the value
+
+                this: this keyword is used to refer to the current object                     
+
+
+
+           * 4 pillar of OOPS - 
+                 -Encapsulation
+                 -Inheritance
+                 -Abstraction
+                 -Polymorphism
+
+
+
+            * Encapsulation
+   
+                Encapsulation is defined as the wrapping up of data & methods under a single unit. It also implements data hiding(useless/sensitive-private/default/protected).
+
+                      ___________________
+                     |data  | methods    |_ class(singal unit)
+                     |______|____________|
+                        |          |
+                    properties   function 
+
+
+            * Constructors
+
+                Constructor is a special method which is invoked automatically at the time of object creation.
+          
+                     - Constructors have the same name as class or structure.
+                     - Constructors don't have a return type.(Not even void)
+                     - Constructors are only called once, at object creation.
+                     - Memory allocation happens when constructor is called.
+
+                
+                 Initialization - initial value ko assign karna 
+
+                 Types of Constructors
+                      Non-parameterized
+                      Parameterized
+                      Copy Constructor
+
+                           * Constructor Overloading(example of polymorphism) - Jab program ye dekh leta h kon si object ke liye kon sa constructor called karna h. 
+                                                                   
+
+             * Destructors
+                    Destroy object
+
+              
+                         Garbage Collector - delete unused object, variables, arrays.
+
+
+            * Inheritance 
+              Inheritance is when properties & methods of base class are passed on to a derived class and will use "extends" keyword to inherit.
+
+                         class A - Parent/ Base
+                           |
+                         class B - Child/ Derived
+
+
+                             extends - khichana
+
+
+
+               * Types of Inheritance
+          
+                   Single Level Inheritance
+
+                       Base Class 
+                          |
+                       Derived Class
+
+
+                   Multi Level Inheritance 
+   
+                       Base Class 
+                          |
+                       Derived Class
+                          |
+                       Derived Class
+
+                            Ex - Animal (color/ eat, breath)
+                                   |
+                                   |
+                                 Mammals (legs)  
+                                   |
+                                  Dog    (breed)
+
+
+
+                    Heirarchial Inheritance 
+                     
+                       Base Class 
+                        /      \
+                    Derived    Derived
+                     Class      Class
+ 
+                    
+ 
+                             Ex: Animal - eat(), breathe()
+                                /  |   \               
+                             Fish Bird Mammals
+                              swim fly  walk
+
+
+
+
+                     Hybrid Inheritance 
+
+                        []
+                       /  \ 
+                      []  []
+                           |
+                          []
+
+
+                            Ex: Animal
+                               /  |   \
+                           Fish  Bird Mammal
+                           /  |    |  |  \   \
+                       Tuna Shark  |  Dog Cat Human
+                                  Peacock
+
+
+                       Multiple Inheritance 
+            
+                            A    B
+                             \  /     ---- Interfaces
+                               C
+
+
+ 
+                    forms
+                    -----
+              * Polymorphism -  when we try to do similar things in multiple forms. Ex:- Constructor.
+                ----
+                many 
+                    
+                   
+                    - Compile Time Polymorphism (Static)  - Run karne se phele hi complier ko pata tha kon sa method call karna h.
+                        Method Overloading 
+ 
+                    - Run Time Polymorphism (Dynamic)
+                        Method Overriding
+
+
+                           * Method Overloading 
+
+                                Multiple functions with the same name but different parameters
+
+                                   Ex: - parameter ka type, count different
+                                        
+                                         Calculator {
+                                           Sum(int a, int b)
+                                           Sum(float a, float b)
+                                           Sum(int a, int b, int c)
+                                         }
+
+                            * Method Overriding 
+
+                                  Parent and child classes both contain the same function with a different definition(kam different karna).
+
+                                                   class A                     Animal
+                                                      |                       void eat() - "eat anything"
+                                                   class B                       |
+                                                                                Deer
+                                                                              void eat() - "eats grass"
+
+               * Packages in Java 
+
+                    Package is a group of similar types of classes, interfaces and sub-packages.
+                          
+                        Types -  
+                           In-built packages
+                           User defined
+
+
+
+
+
+                * Abstraction - idea dete h, implementation nai dete h.
+                  --------
+                   khayal
+
+
+                      Hiding all the unnecessary details and showing only the important parts to the user.
+                                       /          \  
+                               Abstract Classes   Interfaces
+
+
+
+
+
+                * Abstract Class - Abstraction can lie between 0-100%.
+
+
+                    - Cannot create an instance(Object) of abstract class
+                    - Can have abstract/non-abstract methods
+                    - Can have constructors - constructors ka kaam apni child class ke object ke variables ko intialize karna bhi ho sakta h.
+
+
+
+                           Ex - abstract class A {
+
+                                   abstract void fun();   - abstract method shouldn't have any implementation
+                                }
+
+  
+
+                                       A  con  (phele A ka constructor call hoga, phir B ka constructor call hoga)
+                                       |\
+                                       | \  obj(B)
+                                       | /
+                                       |/
+                                       B  con  
+
+
+
+
+
+                  * Interfaces - to inherit we use implements keyword.
+
+                       - Interface is a blueprint of a class
+                             - Used to implement multiple Inheritance(5th)
+                                      A    B                Herbivore(I)   Carnivore(I)
+                                      \    /                           \   /
+                                         C                              Bear
+                             - Used to achieve total abstraction(100%)
+
+
+
+
+                              * class -  blueprint of object
+
+                       *  blueprint - blueprint - M800
+                          (Interface)  (class)
+
+
+                          Ex1:- Car[wheels, speed, engine] (Interface)
+                                |
+                          Maruti 800 (class)
+                           |  \     \
+                       [ car1  car2  car3   ] objects
+                       [ M800  M800  M800   ]
+
+
+                           Ex2:- chessplayer - moves (Interface)
+                                    |
+                                 Queen, Rook, Pawn, King (class)
+
+
+                         * Properties:- All methods are public, abstract & without implementation
+                                      - Used to achieve total abstraction
+                                      - Variables in the interface are final, public and static
+  
+                                                 * static - jab koi variable ek baar create hota h class ke liye
+                                                 * Final - no change in its value 
+
+
+
+
+
+               * Static Keyword - Jo constant rahe, Static object memory ke andar ek baar hi banti h.
+
+               * static keyword in Java is used to share the same variable or method of a given class
+                      
+                      - Properties 
+                      - Functions 
+                      - Blocks   
+                          
+                             main()
+                             {
+
+                                      |-{  int a = b+c;
+                             Block    |    syso(a);
+                                      |-}
+
+                                }             
+                                              
+                      - Nested Classes
+
+                               class A {
+ 
+                                 class B {
+                                 }
+                                 class C {
+                                 }
+           
+                                 }
+
+
+                    * Jab bhi hmara constructor memory allocate karwata h kisi bhi object ko banane ke liye, memory heap me below diagram ki tarah allocation hota h            
+                      
+
+                                                 heap 
+ 
+                                               (  name     )   s1
+                                            /  (  roll no. )
+                        ------------       /
+                       | schoolName |     ---- (  name     )   s2
+                        ------------           (  roll no. )
+                             |              \
+                           static            \ (  name     )   s3
+                                               (  roll no. )
+                
+
+                    * Static keyword class & object directly access kar sakti h.
+
+
+                    * Hm chahte h ki ek hi main fuction ho taki complier confuse na ho call karne time, isliye main function ko static declare karte h.
+
+                    * Advantage - 1. Mutiple creation nai hoti memory me, same value ko use kar pate h.
+                                  2. Memory use nai hoti.
+
+
+
+
+
+
+                 * Super Keyword 
+
+                       super keyword is used to refer immediate parent class object 
+
+                         - to access parent's properties
+                         - to access parent's functions
+                         - to access parent's constructor
+
+                                  
+                       Jab super wala line nai likhte child constructor ke andar tab java by default super wala constructor call karta h.
+                        
+
+                * Constructor Chaining - Java
+
+                * Practice Question 3 
+                  Private & protected modifiers are not allowed in front of class because that class will become unusable as we can't access that class in some other class(can't make object).
+            
+                          Java 
+                                           private     default   protected   public 
+                          Class               N          Y          N          Y
+                          Nested Class        Y          Y          Y          Y
+                          Constructor         Y          Y          Y          Y
+                          Method              Y          Y          Y          Y
+                          Field               Y          Y          Y          Y
+                            |
+                          variable, Blocks
+                     
+
+                                   * Nested Class  -     class A {
+                                                            Class B {
+                                                            }
+                                                         }
+
+
+
+                                   * parent reference = child obj
+
+                                         ex - Vehicle 
+                                                 |
+                                                Car 
+
+
+                                               Vehicle v = new Car(); - object right side banta h kyuki object banane ke liye new keyword se memory deni parti h  
+
+                                               Reference - Object
+                                               (variable)  (memory ke andar space occupy karna)
+                                                   |             
+                                     wo variable jo object
+                                     ki taraf point karta h,
+                                     jo object ki taraf lekar 
+                                     jata h, jo object ka 
+                                     address store karta h
+                                         
+
+                                                  Car c = new Vehicle(); - Runtime error
+
+
+
+                                   * Aggregation - nested class
+
+
+
+
+              * Recursion - iteration 
+                            functions
+                       
+                   use of recursion - Trees 
+                                      Graphs
+                                      DP
+
+
+                   What is Recursion?
+                       Recursion is a method of solving a computational problem where the solution depends on solutions to smaller instances of the same problem.
+                       or dividing a problem into smaller instances of similar problems.
+                       
+                           ex -  f(5) = 5 * f(4)
+                                 |          |
+                               factorial    4 * f(3)
+                                                 |                            ^
+      Top to down      |                         3 * f(2)                     |  Combine soln.
+      (towards Base    |                             |                        |
+          case)                                      2 * f(1)
+                                                         |
+                                         Base Case  ---  1 * f(0)
+                                         (answer)            1
+
+                          
+
+                            5!        |
+                            4!        |  small similar problem - Recursive functions(Jo function bar bar khud ko call karte h unko recursive function khete h)
+                            3!        |
+                                      
+                            
+
+                        3 steps in recursion 
+                           1. Base Case 
+                           2. Kaam - multiply - n * f(n-1)
+                           3. f(n-1) - inner call
+
+
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

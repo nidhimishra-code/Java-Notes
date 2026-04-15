@@ -1,0 +1,625 @@
+JavaScript
+
+
+* Client-side Programming : It is the program that runs on the client machine (browser) and deals with the user interface/display and any other processing that can happen on client machine like reading/writing cookies.
+
+* It can be used to make dynamic website and can dynamically add or remove content
+* DOM can be manipulated, used for form validation and animation purpose etc.
+
+Clients ---- Internet ---- Server
+
+* Extension - extra plug-in jo hmare editor ke features ko badha deti h
+
+* html is static content, we can change written text (dynamic) by using javascript.
+
+* To use javascript, we will use script tag in vs code editor.
+
+* document.write("") - used to print javascript text in browser.
+
+* Two types of comment - 
+   i. Single line
+  ii. Multi-line 
+
+
+* We can write javascript in 3 ways - 
+
+   1. Internal js - jo hm html ke page me hi likhte h 
+   2. External js
+   3. Console - for testing purpose 
+
+* Prompt function - user se input lene ke liye hota h  
+* alert functin is used to show alert box in browser.
+* confirm function is used for to take confirmation from user.
+
+* var is used to declare variable.
+
+* keywords - aaise word hote h jiski meaning interpreter ya compiler ko pata hoti h 
+
+* identifier - jo word hmlog decide karte h 
+
+     ex - var abc = 45 
+          |     \     \
+   keywords identifier literal
+
+     * name can't be started with digit and special symbol (except _ $)
+
+
+* Datatype that can be used - number, string, boolean, object
+
+* Bhaut sare argument comma (,) se separate kar sakte h
+
+* "break" statement is used to terminate the loop on specified condition.
+
+* "continue" statement is used to continue the loop from next iteration after skiping rest of the line of loop.
+
+* "while" - entry control loop 
+  "do while" - exit control loop
+
+* Function - set of statement h jo kaam karne ke liye likhe jate h 
+
+
+# Lecture 5 Javascript Variables | let, const, var | Naming Rule
+
+* Variables hi data processing karne me help karte h kyuki program hi data ko process karta h but data ko process karne se phele data ko variables me rakhte h.
+
+* Variable - JavaScript variables are containers for storing data values.
+       
+      * A variable is a "named storage" for data.
+
+* How to create variable - 
+ 
+     1. let - it's value can be change.
+     2. const - value can't be changed.
+     3. var - value can be change.
+    
+
+* Three types of message boxes used in js - 
+    
+     1. alert
+     2. prompt
+     3. confirm
+
+
+* setTimeout(function () {       ---- // After 3s console will get cleared
+      //call
+      console.log("clearing...");
+      console.clear();
+  },3000)
+
+
+* setInterval() - it will be called after every 3s.
+
+* table function - Object ko visualize karwata h as a table.
+
+* type in google to learn function of javascript - console object javascript mozilla
+
+
+* DataTypes 
+                                  ______
+             let a=5          a  |   5  |
+                                 |______|
+
+
+    * In RAM (memory) - box is created - inside box, value will put - name is "a".
+
+   * Datatype - it will tell us type of value that will store in variable and variable is a container
+
+   * loosely (Dynamic) Type : No need to mention data type 
+
+   * To check type of datatype - console.log(typeof a)
+
+   * 2 types of datatype - 
+       
+          1. Primitive D.T - Stack - number, string, boolean, null, undefined, symbols
+   
+                 var x = null;
+                 console.log(typeof x) -- object
+
+              
+
+
+
+          2. Reference D.T - Heap - Array, Objects, Date, Function
+
+                let xa = [23]
+                let ya = [23]
+
+                address will be stored in xa & ya variable not it's value
+
+                 
+  * Interview Questions   
+
+  1. Difference between "==" and "===" operators.
+
+  ans. "==" - compares only value
+       "===" - compares variable type along with value
+
+  2. What is NaN property in JavaScript?
+
+  ans. NaN = Not A Number - It indicates a value which is not a legal number.
+
+       isNaN()
+
+ 3. Reference Comparison
+
+ ans. Array - Reference type (address)
+
+      a=[2]
+      b=[2]
+
+                       _______
+          a    ---->  |  2    |
+          1001        |_______|
+                        1001
+
+                       ______
+          b    ---->  |  2   |
+          1002        |______|
+                        1002
+
+
+     a==b
+     1001 == 1002 - false
+
+   
+     let s1 = {name:'hanuman'}
+     let s2 = {name:'hanuman'}
+
+     s1==s2 ----> false
+
+     let s3=s1
+
+     s1==s3 ----> true
+
+ 4. Explain Scope and Scope Chain in javascript
+
+ ans. Scope - Accessibility 
+
+      Three type of scope 
+         
+         1. Global - maximum accessibility from anywhere
+         2. Local or Function scope - variable used under function only
+         3. Block - Related let, const - can be used under block only.
+             
+             ex - if() {
+                    let a=5;
+                  }
+
+           
+
+* String - The String object is used to represent and manipulate a sequence of characters. 
+
+    * Creating String 
+
+       1. Using Literal   
+           ex - Let message = 'Hello'; //store the string
+
+       2. Using String() Constructor
+           ex - Let message = new String('Hello'); //store the string
+   
+
+
+* Type Conversion/ Type Casting - Conversion of number datatype into string is Type Casting.
+
+    * Two type of conversion - 
+        
+            1. Automatic (Implicit) 
+                  ex - alert() 
+
+            2. Manual (Explicit)
+                     
+                    i. String Conversion
+                    ii. Numeric Conversion
+                    iii. Boolean Converison
+   
+
+
+
+
+* Array 
+    
+     Variable ki help se data ko store karte h 
+     Statement aur function ki help se processing karte h uss data pe
+
+  * Important property of javascript array 
+
+       1. Type is not fixed
+                 ex - let arr = [45, 'Durgesh', 49.10]
+
+       2. Size is also not fixed
+                 let arr = [12, 13, 10, 5]
+                 arr.push(8);
+ 
+
+
+
+* Function - block of code designed to perform specific tasks.
+
+    * Syntax - function function_name(arg if any) { 
+                
+                //body
+
+               }
+
+    * invoke/ call - function_name(values)
+
+    * function can be called automatically or by ourselves or at any event 
+
+
+* Conditional statement 
+
+    1. if statements
+      
+        ex - if(condition/expression) --> Truthy 
+             {
+
+                 True block
+
+             }
+
+     2. if else statements
+ 
+         ex - if(condition/expression)
+              {
+
+              } else {
+             
+              }
+
+
+      3. Ladder 
+
+          ex - if(cond 1) {
+
+               } 
+               else if(cond 2) {
+ 
+               }
+               else if(cond 3) {
+
+               }
+               else {
+                   // false block
+               }
+
+
+       4. Nested if
+
+           ex - if() {
+                
+                    if() {
+
+                    }
+                 }
+
+         
+* Truthy and Falsy value 
+
+      1. +ve - true   ex - +32, +1
+      2. -ve - true   ex - -32, -54, -44
+      3. 0 - false
+      4. true - true 
+      5. false - false 
+      6. "ABC" - true 
+      7. "" - false
+      8. object, NaN, null, undefined - false 
+
+
+* Loops in JS - Loops are used to execute the same block of code again and again, as long as a certain condition is met.
+               
+                The basic idea behind a loop is to automate the repetitive tasks within a program to save the time and effort. JavaScript now supports five different types of loops:
+            1. for loop
+            2. while loop
+            3. do..while
+            4. for..in - object ke property ko traverse karne ke liye use hota h
+            5. for..of - iterable object ko iterate karta h
+
+
+
+* For loop - Repeat the statements as long as certian conditions met.
+
+     Syntax - 
+    
+                          1.start          2.end       4.steps
+                             |                |           |
+                       for(initialization; condition; increment) {
+                           // Code to be executed - 3.
+                       }
+
+     Flow Chart 
+            
+                                  |
+                         __________________
+                     1. |   Initialization |
+                        |__________________|
+                                  |
+                                  | 
+                               /     \ 
+                         2.   /       \        false
+                 ___________ /  Test   \ _________________
+                |            \  Cond.  /                  |
+                              \       /
+                               \     /                    |
+                |               \   /
+                             
+                                 | True                   |
+                |         ________________
+                      3. | for Loop Body  |
+                         |________________|               |             
+                |                |
+                          ____________________
+                |________|  Update Expression |           |
+                         |____________________|
+                                                          |
+                                  ________________________|
+                                 | Loop Terminates
+                                 |
+                                 
+
+
+
+
+* While loop -  1. Repeat the statements code as long as the specified condition evaluates to true.
+                2. While loop is entry control loop
+
+* While loop is used in number based program 
+
+
+   Syntax -  while(condition)
+             {
+                 // Code 
+                    ...
+                    ..
+                    .
+              }
+
+
+* While Loop flow chart 
+      
+            
+                                  
+                         __________________
+                        |      While       |
+                        |__________________|
+                                  |
+                                  | 
+                               /     \ 
+                              /       \        false
+                 ____________/  Cond.  \ __________________
+                |            \         /                   |
+                              \       /
+                               \     /                     |
+                |               \   /
+                             
+                                  | True                   |
+                |         ____________________             
+                         |   STATEMENT-1      |
+                         |   STATEMENT-2      |            |             
+                |________|      ...           |
+                         |   STATEMENT-n      |
+                         |                    |            |
+                         |____________________|
+                                                           |
+                                ____________
+                               |  END WHILE |______________|
+                               |_ __________|                                   
+                                 
+
+
+
+* Do...while Loop - 1. Repeat the statements code as long as the specified condition evaluates to true.
+                    2. exit control loop
+
+
+        do 
+        {
+          // Code to be executed 
+        ....
+        ...
+        ..
+        }
+        while(condition);
+
+
+
+* while vs do...while
+
+   1. with a while loop, the condition to be evaluated is tested at the beginning of each loop iteration so if the conditional expression evaluates to false, the loop will never be executed.
+
+   2. With do-while loop, the loop will execute at least once even if condition is false...
+
+
+* for...in and for...of loops
+    
+
+* for...in loop 
+
+  1. The for-in loop is a special type of a loop that iterates over the properties of an object, or the elements of an array.
+  2. for-in loop gives key and value 
+
+
+  syntax - 
+ 
+          for(variable in object) 
+          {
+              // Code to be executed
+          }
+
+
+   * Used for iterating object and array.
+
+
+
+* for...of loop 
+  
+ 1. ES6 introduces a new for-of loop which allows us to iterate over arrays or other iterable objects (e.g. strings) very easily.
+ 2. for...of loop gives value.
+ 3. Object is not iterable.
+
+  Syntax - 
+
+          for(variable of iterableObject) 
+          {
+               // Code to be executed 
+          }         
+        
+
+* Objects & Objects Operations
+
+       
+     What is an Object?
+ans- 1. JavaScript is an object-based language. 
+     2. A JavaScript object is just a collection of key value pairs.
+
+              { Key: Value }
+
+           { Key1: Value1, Key2: Value2...} 
+
+
+
+
+      Creating Object?
+and - 1. { properties } 
+
+         { Name:'Durgesh',
+           Phone:9839,
+           Address:'LKO' }  
+       
+
+
+* Object can also have functions inside
+
+     {
+        Name:'Durgesh',
+        Phone:9839,
+        Address:'LK01',
+        Display:function()
+                {
+                   console.log(this.name);
+                }
+     }
+
+
+* Accessing the properties 
+
+ans. 1. object.key   [ dot operator = reference operator]
+     2. object[key]
+
+
+
+
+* DOM - Document Object Model
+
+  1. Platform and language independent model to represent the HTML or XML documents.
+  2. It defines the logical structure of the documents and the way in which they can be accessed and manipulated by an application program.
+  3. In the DOM, all parts of the document, such as elements, attributes, text, etc. are organized in a hierarchical tree-like structure;
+
+In DOM terminology these individual parts of the document are known as nodes.
+
+
+                       Document  - root
+                          |
+                        <html>
+                          |
+                __________|____________
+               |                       |
+             <head>                  <body>
+               |                _______|________     
+               |               |                |
+             <title>          <h1>             <ul> 
+               |               |            _____|_____      
+               |               |           |           |
+               |               |           |           |
+             My Page       Mobile OS      <li>        <li>
+                                           |           |
+                                          Android     IOS
+
+
+
+* DOM Selectors - html element ko select karke uska object de raha h, jiski help se hmlog ko object ke andar properties and method mil ja rahe.
+
+* DOM Styling - Javascript ki help se kisi bhi html element pe dynamically(run time pe) apne css ko apply kar sakte h .
+
+
+* JavaScript DOM Get and Set Attributes
+
+    <a href="https://www.google.com">Google</a>         <h2 id="main">LearnCodeWith Durgesh</h2>
+        |          |
+       attribute  value
+
+
+    
+    <img src="abc.jpg" alt="">               <h2 id="sub">YouTube Channel</h2>
+      |    |        \     \  
+     Tag  attribute  value attribute
+
+
+     
+
+* Tags - p, div, a
+* Attribute - class, id, style
+
+*   How to get the attributes?
+ans Value = getAttribute(attribute)
+
+
+*   How to set the attribute?   
+ans setAttribute('attr', 'value')
+
+
+* DOM Manipulation
+
+<html>
+  <body>
+    <div id="main">
+      <h1 id="title">Hey There !!</h1>
+      <p id="hint">Learn JavaScript in very simple way</p>
+    </div>
+   </body>
+ </html>
+
+
+                  * DOM Tree
+
+
+                       HTML P
+                       / \
+                      /   \
+                     /     \   
+                    Head    Body C
+                            /
+                           /  
+                        div#main
+                         /   \
+                        /     \
+                   h1#title   p#hint
+
+
+
+  * createElement - to create div tag
+  * add, Remove, Replace
+
+
+* JavaScript DOM Navigation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,294 @@
+Spring Framework and Spring Boot 
+
+* we can build Enterprise level Application and Web Application using Spring Framework.
+
+
+Prerequiste
+
+* Java required upto Threads, Exception Handling, Collection.
+* JDBC, HIBERNATE, XML, JSON
+
+JDK Requirement 
+
+ * Spring 5 - JDK 8
+ * Spring 6 - JDK 17
+
+* IoC(Inversion of Control) - Principle
+* Dependency Injection(Design Pattern) is the actual implementation of IoC
+
+
+* Typical  Web App
+
+Client -  Controller Service Repository - DB
+
+* Spring boot(Opinionated Framework) - It will handle all configuration
+
+* start.spring.io - download file
+
+* .war - Web Archive
+
+* Issue with Springboot - It follow convention over configuration
+
+* Dependency Injection Using Spring Boot
+
+* Inside JVM - IoC Container(Object) - Object creation happen
+
+* IoC is of Application context type (Interface).
+
+* Autowiring means to connect two classes.
+
+* 3 Types of dependency injection
+
+   Field Injection - Not default
+   Constructor Injection - Autowiring is default
+   Setter Injection - Not default
+
+* @Component annotation will create object in IoC container.
+
+* @Primary annotation is used for preference in class method calling.
+
+* @Qualifier for giving preference classes method.
+
+* Archetype mean project structure.
+
+* Every class which spring manages is called manage beans
+
+* Setter and Constructor Injection
+
+* <property name="age" value="12" /> --- injecting value through spring.xml file --- property will use setter injector
+
+* <constructor-arg value="14" /> --- constructor-arg will use constructor injector
+
+* Two type of Project 
+
+1. Standalone - console based 
+2. Web based
+
+
+Typical Web App 
+
+Client -- C  S  R -- DB 
+
+* Server data can be represented with the help of JSON/XML.
+* Controller will accept request from client and will respond back.
+* Controller will handle request for server
+* Servlets - Run on web container, we have to use tomcat to run Servlets.
+
+* @Controller - It will handle client request
+* @RequestMapping("/") - For every request we can create a different method which will respond.
+
+* Rest(Representational State Transfer) API is a concept where you return the data from the server to client.
+ 
+* @RestController/ @ResponseBody - will return data from server to client.
+* Page is already present in React.js
+
+* Spring web has Front Controller which is created by spring and it will see all request mapping.
+
+* Controller will ask data from Service class
+* We can't write business logic inside the controller, it is just for accepting the request and responding to client.
+
+* MVC - Model View Controller - model represents data.
+
+* Rest - http methods (Get, Post, Put, Delete)
+
+* CRUD - Create Read Update and Delete
+
+* Postman
+  
+    404 - resource not found
+    500 - server not found
+    200 - if everything is fine
+
+* Using stream we can filter the product.
+* @PathVariable - to match prodId
+
+* Jackson library is responsible for converting Json to object and vice-versa.
+
+* We are using client as Postman
+* Request from client goes to front controller(server)and from there it goes to controller
+* Any logical work request will go to service (process data, calculate, processing)
+* Repository layout will talk to database.
+
+* JDBC (Java Database Connectivity) - we can connect java code with database - all these code have to do in repository layer.
+
+* Spring JDBC - easier to use
+
+* ORM (Object Relational Mapping) tool - Mapping between Object(Data) and table(Relation) 
+It will translate object into SQL query and save in data base.
+
+* Types of ORM 
+  Hibernate
+  EclipseLink
+  My Bddtis
+  
+* JPA (Java Persistence API) is a standard and Hibernate implement those standard.
+
+* With the help of Spring Data JPA we can store data of service layout in the database.
+
+* Database Management Systems - H2, Postgrease, MySQL
+
+
+
+Spring Boot Interview Questions 
+
+
+1. What do you understand by Spring Boot?
+
+ans. Spring Boot is an open-source Java-based framework that simplifies the development of Spring applications by eliminating boilerplate configurations.
+It also offers embedded servers, default configurations, and starter dependencies.
+
+2. How does Spring Boot differ from the traditional Spring Framework?
+
+ans. It will handle all configuration.
+
+3. What are the main features of Spring Boot?
+
+ans. Auto-configuration - give port number 
+     Spring Boot Starters
+     Spring Boot Actuator - give health of website 
+     Spring Boot Initializr
+     
+
+4. What are Spring Boot starters ?
+
+ans. Web Application
+        Spring Web - Embedded web server (Tomcat), Spring MVC, Jackson, Support for building RESTful web services
+        Spring Boot DevTools
+   
+     Database
+        Spring Data JPA
+        H2 Database
+        MySQL or PostgreSQL
+
+     Security
+        Spring Security
+
+
+    These are pre-configured sets of dependencies designed to simplify the setup and configuration of commonly used technologies and functionalities.
+
+    Ensures compatibility and reduces the chances of missing critical dependencies.
+
+
+5. How do you create a Spring Boot application using spring Initializr?
+
+ans. Spring Initializr - A online tool that generates a skeleton Spring Boot project with the necessary configurations and dependencies.
+
+
+6. What is the purpose of the @SpringBootApplication annotation?
+
+ans. @Configuration - Declares the class as a source of Spring configuration.
+     @EnableAutoConfiguration - Enables Spring Boot's auto-configuration
+     @ComponentScan - Scans for Spring-managed components in the package.
+
+
+7. Is it possible to change the port of the embedded Tomcat server in Spring Boot?
+
+ans. By using the server.port in the application.properties.
+
+
+8. Can we override or replace the Embedded tomcat server in Spring Boot?
+
+ans. Yes, we can replace the Embedded Tomcat server with any server by using the Starter dependency in the pom.xml file.
+
+
+9. What is auto-configuration in Spring boot? how does it help? Why Spring Boot is called opinionated?
+
+ans. Autoconfiguration is spring boot magic features, it automatically configures a lot of things based upon what is present in the class path.
+
+Spring Boot is called opinionated because it does configuration by itself.
+
+
+10. What is the difference between @SpringBootApplication and @EnableAutoConfiguration annotation?
+
+ans. @EnableAutoConfiguration is used to enable auto-configuration but @SpringBootApplication does a lot more than that.
+
+It also combines @Configuration and @ComponentScan annotations to enable Java-based configuration and component scanning in your project.
+
+@SpringBootApplication = @Configuration + @EnableAutoConfiguration + @ComponentScan
+
+
+11. How to disable a specific auto-configuration class?
+
+ans. We can use exclude attribute of @EnableAutoConfiguration(exclude={className}) annotation to exclude specific class.
+
+
+12. What is the difference between @RestController and @Controller in Spring Boot?
+
+ans. @Controller - Map of the model object to view or template and make it human readable 
+
+@RestController - simply returns the object and object data is directly written in HTTP response as JSON or XML
+
+       @RestController = @Controller + @ResponseBody
+
+
+13. Describe the flow of HTTPS requests through the Spring Boot application?
+
+ans. Spring Boot Flow Architecture
+
+                                       Repository Class Extending 
+                                             CRUD Services
+                                               |
+                                               | Dependency Injection
+               HTTPS
+      Client <-------> Controller <------> Service layer <-----> Model
+               Request                         ^                  ^
+                                               |                  |
+                                                ----> Database <---
+                                                                 JPA/Spring
+                                                                    Data
+
+
+
+
+14. What is the difference between @RequestMapping and @GetMapping?
+
+ans. @RequestMapping can be used with GET, POST, PUT, and many other request methods using the methods attribute on the annotation.
+
+Whereas @GetMapping is only an extension of @RequestMapping with GET method which helps you to improve on clarity on request.
+
+@RequestMapping(value = "/user/{userId}", method = RequestMethod.GET)
+
+                 @GetMapping(value = "/user/userId}")
+
+
+
+15. What is the difference between an embedded container and a WAR?
+
+ans. The main difference between an embedded container and a WAR file is that you can run Spring Boot application as a JAR from the command prompt without setting up a web server.
+
+But to run a WAR file, you need to first set up a web server like Tomcat which has Servlet container and then you need to deploy WAR there.
+
+
+16. What is the use of Profiles in spring boot?
+
+ans. Spring has the provision of Profiles to keep the separate configuration of environments.
+
+
+17. What is Spring Actuator? What are its advantages?
+
+ans. Provides special feature to monitor and manage your application when you push it to production.
+
+18. How to get the list of all the beans in your Spring boot application?
+
+ans. Spring Boot actuator "/Beans" is used to get the list of all the spring beans in your application
+
+"/env" returns the list of all the environment properties of running the spring boot application.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+Java 8
+
+
+Stream API - it is used to process data structures or collections to get desired result
+Lambda expression - without method definition, we can define method inside interface
+Functinal Interface - that has exactly one abstract method
+Default method - return type is default, can make body
+Optional class - to handle null values or to avoid null pointer exception
+
+ 

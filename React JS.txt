@@ -1,0 +1,24 @@
+React JS
+
+
+Question - What is React JS?
+     ans - A JavaScript library for building user interfaces 
+           ReactJS is a declarative, efficient, and flexible JavaScript library for building reusable UI components.
+           We can make our own component
+
+* Angular js is a framework and React js is a library. Both are used for making single page application.
+
+* React is Component based
+
+               App
+     NavBar  Profile  Trends  Feed
+                              Tweet
+                              Like
+
+* Software Required - node js, Visual Studio Code
+
+* npm - node package manager
+
+* react js - website for reading 
+    
+  

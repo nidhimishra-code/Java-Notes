@@ -1,0 +1,174 @@
+CSS
+
+* CSS is used to style the website.
+
+* Atleast three things we should know for making static website
+  i. Html
+ ii. CSS 
+iii. JavaScript
+
+* What is CSS?
+* How to Write CSS?
+* CSS Comments
+* Different way of writing CSS in our html document.
+* Important Selector
+* Box Model** 
+* Height
+* Width
+* Margin
+* Padding
+* Changing background and foreground color
+* Text property
+* Font property 
+
+* CSS - Cascading Style Sheets	
+  It's a language that describes the style of an HTML document 
+  It's describes how HTML elements should be displayed on screen.
+
+* SYNTAX 
+
+     selector {
+
+               property:value;
+              
+               }
+
+
+    for ex - 
+            
+      #f {
+
+            color:red;               [ since H1 have f as id]
+
+         }
+
+
+* <style></style> - we are making space for css styling by using "style" tag 
+  style ke andar jo CSS likhenge wo body ke andar jitne bhi elements honge unpe apply hoga.
+
+
+* We can apply CSS in three ways - 
+
+  1. inline css - agar kisi particular element pe css lagate h to wo hota h inline css.
+
+  Disadvantage of inline css - hme har element pe jake css lagana hoga.                                                          
+
+2. internal css - head ke andar jo style laga ke css likhte h wo internal css hoga.
+
+     Padding - Internal distance
+
+   Disadvantage of internal css - can't apply changes on other file tags.
+
+3. external css - using this css, we can apply styling in different files of project.
+
+
+* Three type of selector - Tag, Class Id
+
+* Tag Selector - Means with the help of tag, we can select multiple element.
+
+* CLass Selector ki help se bhaut sare element ko apne according target kar sakte h .
+
+* Id Selector - to target element uniquely 
+
+* To watch more selector - https://www.w3schools.com/css/css_selectors.app
+
+* BOX MODEL - 
+
+     Margin - Bahar wali distance from browser
+     Padding - Andar wali distance from content
+
+ 
+
+    margin-top    margin
+           |        |
+     --------------------
+    |  |              |  |
+    |  pt        padding |
+    |                    |- margin-right
+    |- pl            pr -|
+    |                    |
+    |    content         | - box
+    |    text | image    |  
+    |                    |
+     ---------------------
+            |       |
+          border   margin-bottom
+
+
+   <-----w------>  
+    ____________
+   |            |  |
+   |            |  |h
+   |            |  |
+   |____________|  |
+
+
+
+    width:300px, width:100% (percentage is with respect to parent), width:50%;
+    
+    height:400px, height:50%, height:30%;
+
+* margin:auto; - margin will be calculated automatically.
+                 it can be used to center boxes.
+
+* View port height - browser height = container height
+
+* Max height and Max width - kam ho sakta h jayada nai ho sakta h.
+  
+   * Agar window ka size 100px se jayada hua to bhi container ka size nai badhega par kaam hua to container kaam ho jayega
+
+
+        ________________
+       |                |      
+       |                |     w = 100px; - fixed
+       |________________|    
+                              max-width:100px;
+                              max-height:100px;
+
+
+   * Short-hand notation - Jaldi se apply kar sakte h, it will go in clockwise direction (phele margin-top aayega fir bad me right, bottom, left aayega).
+
+
+                       margin-top
+                          |
+                     ____________
+                    |            |
+      margin-left - |            | -  margin-right
+                    |____________|
+                           
+                          |
+                        margin-bottom
+
+
+
+          margin-top = 30px;          
+          margin-right = 30px;
+
+          Below are called short-hand notation :-
+
+          margin:30px (top, right, bottom, left) ye sab aayega
+
+          margin:30px (t, b)  40px (l, r)
+
+          margin:40px (t) 30px (r) 20px (b) 10px (l)
+
+         * same goes with padding
+
+         
+          border:1px solid red; - ek property ke andar 3 value de rahe h
+                   |   |     |
+                   w  style color
+
+ 
+
+   * text-indentation - used to space first line of text.
+
+
+
+
+
+
+
+
+
+

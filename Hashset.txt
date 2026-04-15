@@ -1,0 +1,24 @@
+* Hashset in Java
+
+  Insert/ Add - O(1)          ---> Time Complexity
+  Search/ Contains - O(1)
+  Delete/ Remove - O(1)
+
+* Array
+
+  Add - O(1)
+  Search - O(n)
+  Remove - O(n)
+
+* Sorted Array
+
+  Add - O(n)
+  Search - O(logn)
+  Remove - O(n)
+
+* Binary ST
+  
+  Worst case    Best case
+  O(h)           O(n)
+  O(h)           O(n)     O(log n)
+  O(h)           O(n)
